@@ -38,7 +38,7 @@ export async function loadVocabulary(forceRefresh = false): Promise<WordItem[]> 
   // 2. 瀏覽器環境優先使用 fetch
   if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
     try {
-      const response = await window.fetch('/data/vocabulary.json');
+      const response = await window.fetch(`${import.meta.env.BASE_URL}data/vocabulary.json`);
       if (response.ok) {
         cachedWords = (await response.json()) as WordItem[];
         return cachedWords;
@@ -82,7 +82,7 @@ export async function getDictVersion(forceRefresh = false): Promise<DictVersion>
   // 2. 瀏覽器環境
   if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
     try {
-      const response = await window.fetch('/data/version.json');
+      const response = await window.fetch(`${import.meta.env.BASE_URL}data/version.json`);
       if (response.ok) {
         cachedVersion = (await response.json()) as DictVersion;
         return cachedVersion;

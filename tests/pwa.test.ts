@@ -22,7 +22,7 @@ describe('PWA Configuration & Manifest Spec', () => {
     expect(pwaManifest.theme_color).toBe('#2563eb')
     expect(pwaManifest.background_color).toBe('#ffffff')
     expect(pwaManifest.display).toBe('standalone')
-    expect(pwaManifest.start_url).toBe('/')
+    expect(pwaManifest.start_url).toBe('./')
     expect(pwaManifest.icons.length).toBeGreaterThanOrEqual(2)
   })
 
@@ -59,7 +59,7 @@ describe('PWA Configuration & Manifest Spec', () => {
     expect(manifest.short_name).toBe('一字不漏')
     expect(manifest.theme_color).toBe('#2563eb')
     expect(manifest.display).toBe('standalone')
-    expect(manifest.start_url).toBe('/')
+    expect(manifest.start_url).toBe('./')
   })
 })
 
