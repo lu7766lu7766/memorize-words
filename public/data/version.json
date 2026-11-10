@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-11-10T03:04:37.942Z",
+  "wordCount": 249,
+  "checksum": "2d316297b0ad1061467bc6623d63e3357b5293cffb3a65ed921aba232ab19fd8",
+  "stats": {
+    "total": 249,
+    "gsat": 212,
+    "toeic": 53,
+    "both": 16,
+    "gsatLevels": {
+      "1": 43,
+      "2": 37,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 27
+    }
+  }
+}
