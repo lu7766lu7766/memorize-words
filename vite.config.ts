@@ -60,12 +60,15 @@ export const pwaOptions: Partial<VitePWAOptions> = {
 
 // GitHub Pages 專案頁面路徑：https://<user>.github.io/<repo>/
 // 在 GitHub Actions 中自動依 repo 名稱決定（學生 fork 或改名也能正確部署）
+// 在 Vercel（process.env.VERCEL）則使用根路徑 '/'
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1]
-export const BASE_PATH = !repoName
-  ? '/memorize-words/'
-  : repoName.endsWith('.github.io')
-    ? '/'
-    : `/${repoName}/`
+export const BASE_PATH = process.env.VERCEL
+  ? '/'
+  : !repoName
+    ? '/memorize-words/'
+    : repoName.endsWith('.github.io')
+      ? '/'
+      : `/${repoName}/`
 
 export default defineConfig({
   base: BASE_PATH,
